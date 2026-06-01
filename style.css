@@ -73,7 +73,6 @@ main {
     outline: none;
 }
 
-
 .conta input::placeholder,
 .pessoas input::placeholder{
     color: var(--green-300);
@@ -128,7 +127,7 @@ main {
 
 }
 
-.resultados div{
+.resultados div div{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -172,6 +171,17 @@ main {
 }
 
 @media (min-width: 920px){
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100svh;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    header{
+        padding: 0;
+    }
     main{
         display: flex;
         gap: 3rem;
@@ -185,7 +195,24 @@ main {
         width:100% ;
     }
 
+    .conta input ::-webkit-inner-spin-button,
+    .pessoas input ::-webkit-inner-spin-button{
+        display: none;
+    }
+
     .gorjeta div{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .resultados{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 2.5rem;
+    }
+
+    .resultados div > strong{
+        font-size: 3rem;
     }
 }
